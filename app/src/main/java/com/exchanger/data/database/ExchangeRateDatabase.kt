@@ -2,12 +2,11 @@ package com.exchanger.data.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
-import com.exchanger.data.database.entities.CashEntity
-import com.exchanger.data.database.entities.UnitCurrencyEntity
+import com.exchanger.data.database.entities.CurrencyEntity
+import com.exchanger.data.database.entities.CurrencyExchangesEntity
 
 @Database(
-    entities = [CashEntity::class,UnitCurrencyEntity::class],
+    entities = [CurrencyEntity::class,CurrencyExchangesEntity::class],
     version = 1,
     exportSchema = false
 )

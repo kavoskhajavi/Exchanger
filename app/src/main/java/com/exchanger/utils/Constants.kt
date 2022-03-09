@@ -9,7 +9,8 @@ class Constants {
 
         //Room Database
         const val DATABASE_NAME = ""
-        const val CASH_TABLE = "cash_table"
-        const val UNIT_CURRENCY = "unit_currency"
+        const val Currency_TABLE = "currency_table"
+        const val Currency_Exchanges_TABLE = "currency_cxchangesـtable"
+        const val SETTING_TABLE = "setting_table"
     }
 }

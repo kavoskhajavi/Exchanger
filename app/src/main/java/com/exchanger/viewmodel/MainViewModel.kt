@@ -9,6 +9,7 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.exchanger.data.LocalDataSource
 import com.exchanger.data.Repository
 import com.exchanger.models.ExchangeRatesModel
 import com.exchanger.utils.NetworkResult
@@ -28,7 +29,6 @@ class MainViewModel @ViewModelInject constructor(
 
 
     private suspend fun getRateSafeCall(rate: Map<String, String>) {
-
         rateResponse.value = NetworkResult.Loading()
         if (hasInternetConnection()) {
             val response = repository.remote.getRate(rate)
